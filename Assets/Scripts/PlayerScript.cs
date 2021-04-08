@@ -13,7 +13,7 @@ public class PlayerScript : MonoBehaviour
     LayerMask floormask;
     [SerializeField]
     LayerMask playerMask;
-    //Test Comment
+
     Rigidbody2D rb2d;
     BoxCollider2D collider2d;
     Animator animController;
