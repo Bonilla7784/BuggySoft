@@ -11,7 +11,7 @@ public class MenuScript : MonoBehaviour
         SceneManager.LoadScene("Main Scene");
     }
 
-    public void private void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info) {
+    public void Salir() {
         {
             Debug.Log ("Saliendo");
             Application.Quit();
