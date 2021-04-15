@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -73,9 +74,13 @@ public class PlayerScript : MonoBehaviour
         {
             animController.SetTrigger("Attack");
             if (facingRight)
+            {
                 hits = Physics2D.OverlapBoxAll(transform.position + new Vector3(1f, 1.9f, 0f), new Vector2(4f, 3.5f), 0f, ~playerMask);
+            }
             else
+            {
                 hits = Physics2D.OverlapBoxAll(transform.position + new Vector3(-1f, 1.9f, 0f), new Vector2(4f, 3.5f), 0f, ~playerMask);
+            }
             foreach (Collider2D hit in hits)
             {
                 Debug.Log("Hit " + hit.name);
