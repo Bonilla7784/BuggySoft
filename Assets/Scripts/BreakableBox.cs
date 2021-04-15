@@ -19,12 +19,8 @@ public class BreakableBox : MonoBehaviour
         aS = GetComponent<AudioSource>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        StartCoroutine(Break());
-    }
 
-    private IEnumerator Break()
+    public IEnumerator Break()
     {
         particle.Play();
         aS.Play();
