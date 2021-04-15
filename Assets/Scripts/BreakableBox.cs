@@ -19,8 +19,12 @@ public class BreakableBox : MonoBehaviour
         aS = GetComponent<AudioSource>();
     }
 
+    public void PublicBreak()
+    {
+        StartCoroutine(Break());
+    }
 
-    public IEnumerator Break()
+    private IEnumerator Break()
     {
         particle.Play();
         aS.Play();

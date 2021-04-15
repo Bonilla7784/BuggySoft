@@ -84,11 +84,10 @@ public class PlayerScript : MonoBehaviour
             foreach (Collider2D hit in hits)
             {
                 Debug.Log("Hit " + hit.name);
-                if (hit.tag == "Destructable")
+                if (hit.CompareTag("Destructible"))
                 {
                     Debug.Log("Destroyed " + hit.name);
-                    BreakableBox hitScript = hit.gameObject.GetComponent<BreakableBox>();
-                    hitScript.StartCoroutine(hitScript.Break());
+                    hit.gameObject.GetComponent<BreakableBox>().PublicBreak();
                 }
             }
         }

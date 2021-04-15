@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - hitting
-  - Destructable
+  - Destructible
   layers:
   - Default
   - TransparentFX
