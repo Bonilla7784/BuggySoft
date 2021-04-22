@@ -13,11 +13,16 @@ public class PlayerScript : MonoBehaviour
     LayerMask floormask;
     [SerializeField]
     LayerMask playerMask;
+    [SerializeField]
+    AudioClip jumpSound;
+    [SerializeField]
+    AudioClip attackSound;
 
     Rigidbody2D rb2d;
     BoxCollider2D collider2d;
     Animator animController;
     SpriteRenderer spriteRender;
+    AudioSource audioSrc;
     float inputX, inputY;
     Vector2 inputVector;
     RaycastHit2D floor;
@@ -33,6 +38,7 @@ public class PlayerScript : MonoBehaviour
         collider2d = GetComponent<BoxCollider2D>();
         animController = GetComponent<Animator>();
         spriteRender = GetComponent<SpriteRenderer>();
+        audioSrc = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -51,6 +57,8 @@ public class PlayerScript : MonoBehaviour
     void FixedUpdate()
     {
         rb2d.velocity = inputVector;
+        if (jumpProcessing)
+            audioSrc.PlayOneShot(jumpSound, 0.8f);
         jumpProcessing = false;
         HandleAttack();
     }
@@ -73,6 +81,7 @@ public class PlayerScript : MonoBehaviour
         if (attackProcessing)
         {
             animController.SetTrigger("Attack");
+            audioSrc.PlayOneShot(attackSound);
             if (facingRight)
             {
                 hits = Physics2D.OverlapBoxAll(transform.position + new Vector3(1f, 1.9f, 0f), new Vector2(4f, 3.5f), 0f, ~playerMask);
