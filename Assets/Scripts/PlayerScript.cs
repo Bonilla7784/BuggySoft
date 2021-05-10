@@ -17,6 +17,8 @@ public class PlayerScript : MonoBehaviour
     AudioClip jumpSound;
     [SerializeField]
     AudioClip attackSound;
+    [SerializeField]
+    AudioClip hurtSound;
 
     Rigidbody2D rb2d;
     BoxCollider2D collider2d;
@@ -32,6 +34,7 @@ public class PlayerScript : MonoBehaviour
     Collider2D[] hits;
     public int health = 3;
     public Vector3 spawnPoint;
+    bool immune = false;
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +53,7 @@ public class PlayerScript : MonoBehaviour
     {
         GetInput();
         
-        spriteRender.flipX = !facingRight;
+        //spriteRender.flipX = !facingRight;
         animController.SetBool("isMoving", isMoving);
         animController.SetBool("isGrounded", isGrounded);
 
@@ -60,6 +63,7 @@ public class PlayerScript : MonoBehaviour
 
     void FixedUpdate()
     {
+        spriteRender.flipX = !facingRight;
         rb2d.velocity = inputVector;
         if (jumpProcessing)
             audioSrc.PlayOneShot(jumpSound, 0.8f);
@@ -163,6 +167,8 @@ public class PlayerScript : MonoBehaviour
         transform.position = spawnPoint;
         rb2d.velocity = Vector2.zero;
         LoseHealth(1);
+        audioSrc.PlayOneShot(hurtSound, 0.8f);
+        StartCoroutine(FlickerImmunity(3f));
     }
 
     void LoseHealth(int n = 1)
@@ -175,6 +181,21 @@ public class PlayerScript : MonoBehaviour
         {
             health = 0;
             Debug.Log("Game Over");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
         }
     }
+
+    IEnumerator FlickerImmunity(float seconds = 5f)
+    {
+        immune = true;
+        for (;seconds > 0f; seconds -= 0.2f)
+        {
+            spriteRender.enabled = false;
+            yield return new WaitForSeconds(0.1f);
+            spriteRender.enabled = true;
+            yield return new WaitForSeconds(0.1f);
+        }
+        immune = false;
+    }
+
 }
