@@ -30,6 +30,8 @@ public class PlayerScript : MonoBehaviour
     bool jumpProcessing = false, attackProcessing = false;
     public bool isMoving = false, isGrounded = false, facingRight = true;
     Collider2D[] hits;
+    public int health = 3;
+    public Vector3 spawnPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,8 @@ public class PlayerScript : MonoBehaviour
         animController = GetComponent<Animator>();
         spriteRender = GetComponent<SpriteRenderer>();
         audioSrc = GetComponent<AudioSource>();
+        health = 3;
+        spawnPoint = transform.position;
     }
 
     // Update is called once per frame
@@ -151,6 +155,26 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetButtonDown("Fire1") || attackProcessing)
         {
             attackProcessing = true;
+        }
+    }
+
+    public void Kill()
+    {
+        transform.position = spawnPoint;
+        rb2d.velocity = Vector2.zero;
+        LoseHealth(1);
+    }
+
+    void LoseHealth(int n = 1)
+    {
+        if (health - n > 0)
+        {
+            health -= n;
+        }
+        else
+        {
+            health = 0;
+            Debug.Log("Game Over");
         }
     }
 }
