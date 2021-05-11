@@ -11,10 +11,14 @@ public class MenuScript : MonoBehaviour
         SceneManager.LoadScene("Main Scene");
     }
 
-    public void Salir() {
-        {
-            Debug.Log ("Saliendo");
-            Application.Quit();
-        }
+    public void Salir()
+    {
+        Debug.Log ("Saliendo");
+        Application.Quit();
+    }
+
+    public void GoBack()
+    {
+        SceneManager.LoadScene("Main Menu");
     }
 }
