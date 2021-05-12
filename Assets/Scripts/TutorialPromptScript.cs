@@ -29,6 +29,6 @@ public class TutorialPromptScript : MonoBehaviour
         {
             yield return 0;
         }
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }

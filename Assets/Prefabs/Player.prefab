@@ -175,9 +175,12 @@ MonoBehaviour:
     m_Bits: 256
   jumpSound: {fileID: 8300000, guid: 9562796a29cd84041aafdd02d9fbf871, type: 3}
   attackSound: {fileID: 8300000, guid: 6cf456e1f20ef0842ba1f5b09508b80e, type: 3}
+  hurtSound: {fileID: 8300000, guid: bb2fa3b4decdc54499a5b7a4256d4304, type: 3}
   isMoving: 0
   isGrounded: 0
   facingRight: 1
+  health: 3
+  spawnPoint: {x: 0, y: 0, z: 0}
 --- !u!82 &5541724769991939346
 AudioSource:
   m_ObjectHideFlags: 0
