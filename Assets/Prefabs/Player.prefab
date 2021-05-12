@@ -176,6 +176,7 @@ MonoBehaviour:
   jumpSound: {fileID: 8300000, guid: 9562796a29cd84041aafdd02d9fbf871, type: 3}
   attackSound: {fileID: 8300000, guid: 6cf456e1f20ef0842ba1f5b09508b80e, type: 3}
   hurtSound: {fileID: 8300000, guid: bb2fa3b4decdc54499a5b7a4256d4304, type: 3}
+  blackScreen: {fileID: 0}
   isMoving: 0
   isGrounded: 0
   facingRight: 1
@@ -288,7 +289,7 @@ GameObject:
   - component: {fileID: 7232093717742803946}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -19,6 +19,8 @@ public class PlayerScript : MonoBehaviour
     AudioClip attackSound;
     [SerializeField]
     AudioClip hurtSound;
+    [SerializeField]
+    GameObject blackScreen;
 
     Rigidbody2D rb2d;
     BoxCollider2D collider2d;
@@ -166,26 +168,38 @@ public class PlayerScript : MonoBehaviour
     {
         transform.position = spawnPoint;
         rb2d.velocity = Vector2.zero;
-        LoseHealth(1);
-        audioSrc.PlayOneShot(hurtSound, 0.8f);
-        StartCoroutine(FlickerImmunity(3f));
+        immune = false;
+        Hurt(1);
     }
 
-    void LoseHealth(int n = 1)
+    public void Hurt(int damage = 1)
     {
-        if (health - n > 0)
+        if (!immune)
         {
-            health -= n;
-        }
-        else
-        {
-            health = 0;
-            Debug.Log("Game Over");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
+            audioSrc.PlayOneShot(hurtSound, 0.8f);
+            if (health - damage > 0)
+            {
+                health -= damage;
+                StartCoroutine(FlickerImmunity(3f));
+            }
+            else
+            {
+                health = 0;
+                blackScreen.SetActive(true);
+                StartCoroutine(GameOver());
+            }
         }
     }
 
-    IEnumerator FlickerImmunity(float seconds = 5f)
+    IEnumerator GameOver()
+    {
+        immune = true;
+        yield return new WaitForEndOfFrame();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
+
+    }
+
+    IEnumerator FlickerImmunity(float seconds = 3f)
     {
         immune = true;
         for (;seconds > 0f; seconds -= 0.2f)
