@@ -9,6 +9,7 @@ public class CameraMove : MonoBehaviour
 
     float xPlayerOffset, yPlayerOffset;
     Vector3 simPlayerPos;
+    float xPos, yPos;
     public float xOffset, yOffset;
     public float xMaxOffset, yMaxOffset;
     // Start is called before the first frame update
@@ -29,6 +30,9 @@ public class CameraMove : MonoBehaviour
         xPlayerOffset = Mathf.Clamp(xPlayerOffset, -xMaxOffset, xMaxOffset);
         yPlayerOffset = Mathf.Clamp(yPlayerOffset, -yMaxOffset, yMaxOffset);
 
-        this.transform.position = new Vector3(simPlayerPos.x + xPlayerOffset, simPlayerPos.y + yPlayerOffset, this.transform.position.z);
+        xPos = simPlayerPos.x + xPlayerOffset;
+        yPos = simPlayerPos.y + yPlayerOffset;
+
+        this.transform.position = new Vector3(xPos, yPos, this.transform.position.z);
     }
 }
