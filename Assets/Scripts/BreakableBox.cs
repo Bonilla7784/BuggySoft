@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class BreakableBox : MonoBehaviour
 {
@@ -34,5 +35,6 @@ public class BreakableBox : MonoBehaviour
 
         yield return new WaitForSeconds(particle.main.startLifetime.constantMax);
         Destroy(gameObject);
+        AstarPath.active.Scan();
     }
 }
