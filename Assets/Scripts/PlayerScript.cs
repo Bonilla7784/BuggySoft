@@ -21,6 +21,8 @@ public class PlayerScript : MonoBehaviour
     AudioClip hurtSound;
     [SerializeField]
     GameObject blackScreen;
+    [SerializeField]
+    ParticleSystem walkDust;
 
     Rigidbody2D rb2d;
     BoxCollider2D collider2d;
@@ -55,17 +57,20 @@ public class PlayerScript : MonoBehaviour
     {
         GetInput();
         
-        //spriteRender.flipX = !facingRight;
+        spriteRender.flipX = !facingRight;
         animController.SetBool("isMoving", isMoving);
         animController.SetBool("isGrounded", isGrounded);
 
+        if (isMoving && isGrounded)
+            walkDust.Play();
+        
         inputVector = new Vector2(inputX, inputY);
 
     }
 
     void FixedUpdate()
     {
-        spriteRender.flipX = !facingRight;
+
         rb2d.velocity = inputVector;
         if (jumpProcessing)
             audioSrc.PlayOneShot(jumpSound, 0.8f);
