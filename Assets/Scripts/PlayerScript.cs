@@ -217,4 +217,9 @@ public class PlayerScript : MonoBehaviour
         immune = false;
     }
 
+    public void GiveHealth(int quantity = 1)
+    {
+        health += quantity;
+    }
+
 }
