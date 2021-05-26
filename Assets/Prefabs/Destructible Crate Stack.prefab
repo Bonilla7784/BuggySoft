@@ -227,6 +227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddbc0f0632142084196c3dff1d0b3c30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heartPrefab: {fileID: 8237925325616888126, guid: d4d96adfa40e3204ca7901b56e07601f, type: 3}
+  heartDropChance: 1
 --- !u!1 &2781756639462551815
 GameObject:
   m_ObjectHideFlags: 0

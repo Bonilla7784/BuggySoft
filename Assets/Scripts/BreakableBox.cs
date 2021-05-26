@@ -6,11 +6,16 @@ using Pathfinding;
 
 public class BreakableBox : MonoBehaviour
 {
+    [SerializeField]
+    GameObject heartPrefab;
+
+    public float heartDropChance;
+
     private ParticleSystem particle;
     private SpriteRenderer sr;
     private PolygonCollider2D pc;
     private AudioSource aS;
-
+    
 
     private void Awake()
     {
@@ -33,8 +38,20 @@ public class BreakableBox : MonoBehaviour
         sr.enabled = false;
         pc.enabled = false;
 
+        AstarPath.active.Scan();
+        DropHeart();
+
         yield return new WaitForSeconds(particle.main.startLifetime.constantMax);
         Destroy(gameObject);
-        AstarPath.active.Scan();
+    }
+
+    void DropHeart()
+    {
+        float chance = UnityEngine.Random.Range(0f, 1f);
+        Debug.Log(chance);
+        if (chance <= heartDropChance)
+        {
+            Instantiate(heartPrefab, transform.position, Quaternion.Euler(0f,0f,0f));
+        }
     }
 }
