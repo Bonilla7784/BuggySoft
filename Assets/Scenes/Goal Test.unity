@@ -13520,6 +13520,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4202989667939138532, guid: d95108ecaa0683c46ae909ab19dafb25, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 1015
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202989667939138533, guid: d95108ecaa0683c46ae909ab19dafb25, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202989667939138533, guid: d95108ecaa0683c46ae909ab19dafb25, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202989667939138533, guid: d95108ecaa0683c46ae909ab19dafb25, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 4202989668712246449, guid: d95108ecaa0683c46ae909ab19dafb25, type: 3}
       propertyPath: m_Name
       value: street-lamp
