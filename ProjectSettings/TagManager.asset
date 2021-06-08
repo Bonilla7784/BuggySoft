@@ -6,6 +6,7 @@ TagManager:
   tags:
   - hitting
   - Destructible
+  - Player Target
   layers:
   - Default
   - TransparentFX
