@@ -39,6 +39,7 @@ public class PlayerScript : MonoBehaviour
     public int health = 3;
     public Vector3 spawnPoint;
     bool immune = false;
+    public bool hasKey = false;
 
     // Start is called before the first frame update
     void Start()
@@ -112,6 +113,10 @@ public class PlayerScript : MonoBehaviour
                 {
                     Debug.Log("Destroyed " + hit.name);
                     hit.gameObject.GetComponent<BreakableBox>().PublicBreak();
+                }
+                else if (hit.CompareTag("Enemy"))
+                {
+                    hit.gameObject.GetComponent<KeyHolderScript>().AttackHit();
                 }
             }
         }
