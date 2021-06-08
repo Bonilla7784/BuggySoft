@@ -26,8 +26,7 @@ public class KeyHolderScript : MonoBehaviour
     {
         PlayerScript playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
         playerScript.hasKey = true;
-        Transform playerTarget = GameObject.FindGameObjectWithTag("Player Target").transform;
-        keyTargetScript.target = playerTarget;
+        keyTargetScript.target = GameObject.FindGameObjectWithTag("Player Target").transform;
         Destroy(gameObject);
     }
 }
