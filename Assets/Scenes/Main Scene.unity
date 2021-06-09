@@ -1480,6 +1480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e3d4deedd3be98448e48076b030e7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixer: {fileID: 0}
 --- !u!1 &461303707
 GameObject:
   m_ObjectHideFlags: 0
@@ -3436,7 +3437,7 @@ AudioSource:
   m_GameObject: {fileID: 1148020329}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: dfa92924fce4ec44ea9d69af06bd9657, type: 2}
   m_audioClip: {fileID: 8300000, guid: 575f2c0000283d84e98cb23de1a6c366, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
@@ -13914,6 +13915,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Destructible Crate 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8720192965663141997, guid: e4683e251c37e6148933bd561f05be30, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: dfa92924fce4ec44ea9d69af06bd9657, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4683e251c37e6148933bd561f05be30, type: 3}
 --- !u!1 &1502569199
@@ -14741,6 +14746,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1516827}
     m_Modifications:
+    - target: {fileID: 2781756639439736946, guid: 35e9d43922759e942a4c9f9d0adfc450, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: dfa92924fce4ec44ea9d69af06bd9657, type: 2}
     - target: {fileID: 2781756639439736958, guid: 35e9d43922759e942a4c9f9d0adfc450, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -14842,6 +14851,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3343996177029892380, guid: 0eff348836fee0d40bce02c7dcb461e9, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: dfa92924fce4ec44ea9d69af06bd9657, type: 2}
     - target: {fileID: 3343996177029892381, guid: 0eff348836fee0d40bce02c7dcb461e9, type: 3}
       propertyPath: m_Name
       value: HeroKnight
@@ -14964,5 +14977,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Destructible Crate 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8720192965663141997, guid: e4683e251c37e6148933bd561f05be30, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: dfa92924fce4ec44ea9d69af06bd9657, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4683e251c37e6148933bd561f05be30, type: 3}
