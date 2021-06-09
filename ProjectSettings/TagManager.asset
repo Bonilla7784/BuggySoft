@@ -6,6 +6,8 @@ TagManager:
   tags:
   - hitting
   - Destructible
+  - Edge
+  - Enemy
   - Player Target
   - Enemy
   - Bat Enemy
