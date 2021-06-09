@@ -114,9 +114,10 @@ public class PlayerScript : MonoBehaviour
                     Debug.Log("Destroyed " + hit.name);
                     hit.gameObject.GetComponent<BreakableBox>().PublicBreak();
                 }
-                else if (hit.CompareTag("Enemy"))
+                else if (hit.CompareTag("Bat Enemy"))
                 {
-                    hit.gameObject.GetComponent<KeyHolderScript>().AttackHit();
+                    audioSrc.PlayOneShot(hurtSound);
+                    hit.gameObject.GetComponent<BatScript>().AttackHit();
                 }
             }
         }
