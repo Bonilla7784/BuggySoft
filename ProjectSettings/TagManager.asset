@@ -8,6 +8,9 @@ TagManager:
   - Destructible
   - Edge
   - Enemy
+  - Player Target
+  - Enemy
+  - Bat Enemy
   layers:
   - Default
   - TransparentFX
