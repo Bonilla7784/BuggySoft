@@ -458,20 +458,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod
-    lorem orci, at fringilla ipsum scelerisque a. Nam sagittis id mi vel euismod.
+  m_text: 'You are a knight on your way home from a big adventure.
 
 
-    Vestibulum
-    maximus iaculis sem a scelerisque. Sed aliquam tempus ligula, vitae blandit quam
-    tincidunt vitae. Donec quis vulputate dui, sit amet fermentum nulla.
+    You were
+    selected by the King himself to go on a quest to find the Holy Sword, and, after
+    securing the weapon, you returned to the Kingdom.
 
 
-    Suspendisse
-    scelerisque, ipsum in bibendum tempor, orci ipsum pharetra purus, eu faucibus
-    elit nulla sed urna. Morbi augue neque, mattis vitae ullamcorper a, fringilla
-    in lectus. Sed neque elit, ornare semper dolor non, lobortis sollicitudin lectus.
-    Nam vitae posuere ligula. '
+    However, something unexpected
+    happened when you entered your house, and it seems a whole new Adventure is about
+    to begin...'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
