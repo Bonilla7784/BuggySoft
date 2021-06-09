@@ -14,7 +14,7 @@ public class HeartItemScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        playerTransform = GameObject.FindGameObjectWithTag("Player Target").transform;
         destinationScript = GetComponent<Pathfinding.AIDestinationSetter>();
         destinationScript.target = playerTransform;
         audioSrc = GetComponent<AudioSource>();
