@@ -8,7 +8,7 @@ public class MenuScript : MonoBehaviour
     public void Jugar()
     {
         Debug.Log ("Cargando Escena");
-        SceneManager.LoadScene("Main Scene");
+        SceneManager.LoadScene("Intro");
     }
 
     public void Salir()
