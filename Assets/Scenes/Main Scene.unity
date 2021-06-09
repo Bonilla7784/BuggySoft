@@ -363,11 +363,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4202989668712246451, guid: d95108ecaa0683c46ae909ab19dafb25, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 35.92
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4202989668712246451, guid: d95108ecaa0683c46ae909ab19dafb25, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.18
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 4202989668712246451, guid: d95108ecaa0683c46ae909ab19dafb25, type: 3}
       propertyPath: m_LocalPosition.z
@@ -24178,10 +24178,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3343996177029892352, guid: 0eff348836fee0d40bce02c7dcb461e9, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: f6a566fec752ce04ea1fe5199872b440, type: 2}
     - target: {fileID: 3343996177029892354, guid: 0eff348836fee0d40bce02c7dcb461e9, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -24226,10 +24222,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3343996177029892355, guid: 0eff348836fee0d40bce02c7dcb461e9, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300064, guid: ae297123f091bbf4e8f1835eb98fb293, type: 3}
     - target: {fileID: 3343996177029892381, guid: 0eff348836fee0d40bce02c7dcb461e9, type: 3}
       propertyPath: m_Name
       value: HeroKnight
